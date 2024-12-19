@@ -20,3 +20,11 @@
     font-size: 1.2rem; /* Sesuaikan ukuran ikon */
     color: #888; /* Warna ikon */
 }
+
+.sb-nav-link-icon img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; /* Jarak antara ikon dan teks */
+    width: 24px; /* Ukuran ikon */
+    height: 24px;
+}

@@ -312,10 +312,10 @@ if(isset($_POST['hapusbarangmasuk'])){
 
 //edit data barang keluar 
 if(isset($_POST['updatebarangkeluar'])){
-    $idb = $_POST['idb'];  // ID barang
-    $idk = $_POST['idk'];  // ID keluar
+    $idb = $_POST['idb'];
+    $idk = $_POST['idk'];
     $penerima = $_POST['penerima'];
-    $qty = $_POST['qty'];  // Jumlah baru yang diinput
+    $qty = $_POST['qty'];
 
     // Ambil stok saat ini dari tabel `stock`
     $lihatstock = mysqli_query($conn, "SELECT * FROM stock WHERE idbarang='$idb'");

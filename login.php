@@ -63,7 +63,7 @@
                                                 <input class="form-control py-4" name="password" id="inputPassword" type="password" placeholder="Enter password" />
                                             </div>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <button class="btn btn-primary" href="index.php" name="login">Login</button>
+                                                <button class="btn btn-secondary" href="index.php" name="login">Login</button>
                                             </div> 
                                         </form>
                                     </div>

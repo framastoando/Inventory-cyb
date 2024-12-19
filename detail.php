@@ -1,6 +1,7 @@
 <?php
     require 'function.php';
     require 'cek.php';
+    $currentPage = basename($_SERVER['PHP_SELF']); 
 
 //mengambil id barang dari index.php
 $idbarang = $_GET['id'];
@@ -65,29 +66,29 @@ $qrcode = 'https://quickchart.io/qr?text='.$urlview.'&centerImageUrl=https%3A%2F
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <a class="nav-link" href="index.php">
+                            <a class="nav-link <?php echo ($currentPage == 'index.php') ? 'active' : ''; ?>" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Data Barang
                             </a>
-                            <a class="nav-link" href="masuk.php">
+                            <a class="nav-link <?php echo ($currentPage == 'masuk.php') ? 'active' : ''; ?>" href="masuk.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Barang Masuk
                             </a>
-                            <a class="nav-link" href="keluar.php">
+                            <a class="nav-link <?php echo ($currentPage == 'keluar.php') ? 'active' : ''; ?>" href="keluar.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Barang Keluar
-                            </a> 
-                            <a class="nav-link" href="admin.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            </a>
+                            <a class="nav-link <?php echo ($currentPage == 'admin.php') ? 'active' : ''; ?>" href="admin.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-cog"></i></div>
                                 Kelola Admin
                             </a>
-                            <a class="nav-link" href="logout.php">Logout</a> 
+                            <a class="nav-link" href="logout.php">Logout</a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
                         <?php echo htmlspecialchars($email); // Tampilkan email pengguna ?>
-                </div>
+                    </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">

@@ -6103,7 +6103,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-image: url('/inventoris-web/assets/img/main.png');
+  background-image: url('/assets/img/main.png');
   background-size: cover; /* Agar gambar menyesuaikan ukuran elemen */
   background-position: center; /* Pusatkan gambar */
   background-repeat: no-repeat; /* Hindari pengulangan gambar */
@@ -10234,13 +10234,13 @@ body {
   color: rgba(255, 255, 255, 0.25);
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
-  color: #fff;
+  color: #fff !important;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
-  color: #fff;
+  color: #fff !important;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
-  color: #fff;
+  color: #fff !important;
 }
 .sb-sidenav-dark .sb-sidenav-footer {
   background-color: #343a40;

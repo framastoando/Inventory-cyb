@@ -1,6 +1,7 @@
 <?php
     require 'function.php';
-    require 'cek.php'
+    require 'cek.php';
+    $currentPage = basename($_SERVER['PHP_SELF']); 
 ?>
 
 <!DOCTYPE html>
@@ -42,29 +43,29 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <a class="nav-link" href="index.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <a class="nav-link <?php echo ($currentPage == 'index.php') ? 'active' : ''; ?>" href="index.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-boxes-stacked" style="color:rgb(111, 114, 120);"></i></i></div>
                                 Data Barang
                             </a>
-                            <a class="nav-link" href="masuk.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <a class="nav-link <?php echo ($currentPage == 'masuk.php') ? 'active' : ''; ?>" href="masuk.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-arrow-right-to-bracket fa-flip-horizontal" style="color:rgb(111, 114, 120);"></i></i></div>
                                 Barang Masuk
                             </a>
-                            <a class="nav-link" href="keluar.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <a class="nav-link <?php echo ($currentPage == 'keluar.php') ? 'active' : ''; ?>" href="keluar.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-arrow-right-from-bracket" style="color:rgb(111, 114, 120);"></i></div>
                                 Barang Keluar
-                            </a> 
-                            <a class="nav-link" href="admin.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            </a>
+                            <a class="nav-link <?php echo ($currentPage == 'admin.php') ? 'active' : ''; ?>" href="admin.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-cog"></i></div>
                                 Kelola Admin
                             </a>
-                            <a class="nav-link" href="logout.php">Logout</a> 
+                            <a class="nav-link" href="logout.php">Logout</a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
                         <?php echo htmlspecialchars($email); // Tampilkan email pengguna ?>
-                </div>
+                    </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
@@ -241,9 +242,6 @@
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/datatables-demo.js"></script>
         <script src="js\script_masuk.js"></script>
-        <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
-        <script src="js\scan-barcode.js"></script>
-
     </body>
     <div class="modal" id="myModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
