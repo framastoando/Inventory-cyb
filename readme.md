@@ -116,7 +116,8 @@ project-root/
 2. Tambah data barang dengan mengisi informasi lengkap, termasuk barcode.
 3. Gunakan fitur barang masuk dan keluar untuk mencatat perubahan inventaris.
 4. Gunakan scanner barcode (jika tersedia) untuk mempermudah input data.
-5. Manajemen dengan menambah atau menghapus admin inventaris
+5. Manajemen dengan menambah atau menghapus admin inventaris.
+6. Masuk ke halaman detail barang dengan klik nama barang di halaman data barang.
 
 ## Catatan Penting
 
